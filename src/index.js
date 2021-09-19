@@ -4,10 +4,10 @@ import { debounce } from "lodash";
 
 //=================================================================================
 const searchBox = document.getElementById("search_form");
-console.log(searchBox);
+// console.log(searchBox);
 
 const countryCard = document.getElementById("country_card");
-console.log(countryCard);
+// console.log(countryCard);
 //=================================================================================
    
     searchBox.addEventListener('input', debounce((e) => {
