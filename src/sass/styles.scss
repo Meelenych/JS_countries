@@ -1,0 +1,82 @@
+body {
+  background-color: rgb(194, 191, 191);
+}
+
+ul {
+  list-style: none;
+}
+
+.search_items {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 90px;
+}
+
+.form_search {
+  display: flex;
+  height: 40px;
+  border: 2px solid rgba(33, 33, 33, 0.527);
+  border-radius: 4px;
+  padding-left: 15px;
+  margin-right: 10px;
+
+  &:hover,
+  &:focus {
+    color: #000000;
+    fill: rgb(190, 190, 190);
+    border: 2px solid #4b7bff;
+
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: 1s all ease;
+  }
+}
+
+::placeholder {
+  color: #4b7bff75;
+}
+
+.svg {
+  fill: black;
+  margin-left: 10px;
+  //   vertical-align: middle;
+}
+
+.btn {
+  display: flex;
+  height: 40px;
+  cursor: pointer;
+  background-color: #4b7bff;
+  border-width: 2px;
+  border-radius: 4px;
+  border-color: #4b7bff;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 6px 22px 6px 22px;
+  font-weight: 500;
+  min-height: 38px;
+
+  &:hover .svg,
+  &:focus .svg {
+    fill: rgb(190, 190, 190);
+    transition: 200ms all ease;
+  }
+
+  &:hover,
+  &:focus {
+    color: rgb(190, 190, 190);
+    fill: rgb(190, 190, 190);
+    background-color: rgb(38, 38, 196);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 2px 2px rgba(0, 0, 0, 0.12);
+    transition: 500ms all ease;
+  }
+}
+
+input,
+button {
+  outline: none;
+  user-select: none;
+}
