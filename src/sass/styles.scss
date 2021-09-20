@@ -9,9 +9,10 @@ ul {
 .search_items {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   padding-top: 90px;
+  padding-left: 40px;
 }
 
 .form_search {

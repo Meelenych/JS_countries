@@ -55,16 +55,20 @@ const countryCard = document.getElementById("country_card");
             })
                 .join('')
             // console.log('items', items);
-            countryCard.insertAdjacentHTML('afterbegin', items)
+            countryCard.insertAdjacentHTML('afterbegin', items)              
             })
 
            .catch(err => {
             console.log(err)
            })
-            
-        // .finally(() => searchBox.reset())
     
     // console.log('e.target.value:', e.target.value);
     console.log('searchQuery', searchQuery);
+    clearQuery()
+    }), 1000)
 
-}), 1000)
+ 
+
+function clearQuery() {
+  countryCard.innerHTML = '';
+}
