@@ -35,8 +35,17 @@ const countryCard = document.getElementById("country_card");
             console.log('array', array)
 
             let items = array.map((item) => {
-                const { flag, name, capital, languages, population} = item
-                return `<ul>
+                const { flag, name, capital, languages, population } = item
+                
+                if (array.length <= 10 && array.length >= 2) {
+                // throw new Error(`Please specify your request!`) 
+                    return `<ul>
+                    
+                    <li> ${name}</li>
+                   
+                </ul>`}
+                // 
+                else if (array.length === 1) {return `<ul>
                     <li><img src="${flag}" alt="flag" width="300" /></li>
                     <li><b>Country name:</b> ${name}</li>
                     <li><b>Capital:</b> ${capital}</li>
@@ -44,13 +53,13 @@ const countryCard = document.getElementById("country_card");
                     <b>Languages:</b>
                     <ul>
                         ${languages.map((language) => {
-                            const {name} = language 
-                            return `<li>${name}</li>`
-                        })}
+                        const { name } = language
+                        return `<li>${name}</li>`
+                    })}
                     </ul>
                     </li>
                     <li><b>Population:</b> ${population} people</li>
-                </ul>`
+                </ul>`} 
                 
             })
                 .join('')
