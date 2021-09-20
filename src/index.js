@@ -1,6 +1,7 @@
 import './sass/main.scss';
 // import './js/fetchCountries.js';
 import { debounce } from "lodash";
+import Notiflix from "notiflix";
 
 //=================================================================================
 const searchBox = document.getElementById("search_form");
@@ -26,7 +27,8 @@ const countryCard = document.getElementById("country_card");
                     
             .then((array) => {
                 if (array.length > 10) {
-                    throw new Error(`Too many matches found!`)
+                    Notiflix.Notify.failure('Too many matches found!');
+                    throw new Error(`Too many matches found!`);
                 }
                 return array
             })
@@ -38,14 +40,16 @@ const countryCard = document.getElementById("country_card");
                 const { flag, name, capital, languages, population } = item
                 
                 if (array.length <= 10 && array.length >= 2) {
-                // throw new Error(`Please specify your request!`) 
+                Notiflix.Notify.warning('Please specify your request!');    
                     return `<ul>
                     
                     <li> ${name}</li>
                    
                 </ul>`}
                 // 
-                else if (array.length === 1) {return `<ul>
+                else if (array.length === 1) {
+                    Notiflix.Notify.success('Success! Country found!')
+                    return `<ul>
                     <li><img src="${flag}" alt="flag" width="300" /></li>
                     <li><b>Country name:</b> ${name}</li>
                     <li><b>Capital:</b> ${capital}</li>
