@@ -30,6 +30,7 @@
     "sass": "^1.32.8"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "lodash.debounce": "^4.0.8",
     "notiflix": "^3.0.2"
   }

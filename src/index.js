@@ -1,6 +1,6 @@
 import './sass/main.scss';
 // import './js/fetchCountries.js';
-import { debounce } from "lodash";
+import debounce from "lodash/debounce";
 import Notiflix from "notiflix";
 
 //=================================================================================
@@ -73,15 +73,19 @@ const countryCard = document.getElementById("country_card");
 
            .catch(err => {
             console.log(err)
-           })
+            })
     
-    // console.log('e.target.value:', e.target.value);
-    console.log('searchQuery', searchQuery);
-    clearQuery()
+        // console.log('e.target.value:', e.target.value);
+        console.log('searchQuery', searchQuery);
+        clearQuery()
     }), 1000)
-
- 
 
 function clearQuery() {
   countryCard.innerHTML = '';
 }
+
+// console.log(debounce)
+
+// const getCountries = function (e) {
+    
+// }
