@@ -1,7 +1,5 @@
 export default function fetchCountries(searchQuery) {
-  return fetch(
-    `https://restcountries.eu/rest/v2/name/${searchQuery}?fields=name;capital;population;languages;flag`,
-  )
+  return fetch(`https://restcountries.com/v3.1/name/${searchQuery}`)
     .then(response => {
       if (response.ok) return response.json();
       return { countries: [] };
