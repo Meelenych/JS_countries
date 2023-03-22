@@ -3,10 +3,10 @@
   "version": "1.1.0",
   "description": "",
   "main": "index.js",
-  "homepage": "https://meelenych.github.io/goit-js-hw-12-countries/",
+  "homepage": "https://meelenych.github.io/JS_countries/",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /goit-js-hw-12-countries/",
+    "build": "parcel build src/*.html --public-url /JS_countries/",
     "deploy": "gh-pages -d dist",
     "predeploy": "npm run build"
   },
